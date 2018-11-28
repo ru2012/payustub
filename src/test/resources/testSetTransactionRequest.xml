@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:payu="http://soap.api.controller.web.payjar.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <payu:setTransactionRequest>
+            <payu:Api>qwertyuiop</payu:Api>
+        </payu:setTransactionRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

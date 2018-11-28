@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://www.payu.co.za/DeleteTransactionResponseMessage" version="1.0"
+           xmlns:ns1="http://soap.api.controller.web.payjar.com/"
+           xmlns:ns2="https://www.payu.co.za/PayUMapLoader" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://soap.api.controller.web.payjar.com/"/>
+<xs:import namespace="https://www.payu.co.za/PayUMapLoader"/>
+<xs:complexType name="ManagePaymentMethodResponseMessage">
+    <xs:complexContent>
+        <xs:extension base="ns2:PayUMapLoader">
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="customFields" nillable="true"
+                            type="ns1:customField"/>
+                <xs:element minOccurs="0" name="displayMessage" type="xs:string"/>
+                <xs:element name="managePaymentMethodData">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element minOccurs="0" name="key" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="value" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" name="merchantReference" type="xs:string"/>
+                <xs:element minOccurs="0" name="payUReference" type="xs:string"/>
+                <xs:element minOccurs="0" name="pointOfFailure" type="xs:string"/>
+                <xs:element minOccurs="0" name="requestTrace" type="xs:string"/>
+                <xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+                <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+                <xs:element minOccurs="0" name="stage" type="xs:string"/>
+                <xs:element name="successful" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+<xs:complexType name="DeleteTransactionResponseMessage">
+    <xs:complexContent>
+        <xs:extension base="ns2:PayUMapLoader">
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="customFields" nillable="true"
+                            type="ns1:customField"/>
+                <xs:element minOccurs="0" name="displayMessage" type="xs:string"/>
+                <xs:element minOccurs="0" name="merchantReference" type="xs:string"/>
+                <xs:element minOccurs="0" name="payUReference" type="xs:string"/>
+                <xs:element minOccurs="0" name="pointOfFailure" type="xs:string"/>
+                <xs:element minOccurs="0" name="requestTrace" type="xs:string"/>
+                <xs:element minOccurs="0" name="resultCode" type="xs:string"/>
+                <xs:element minOccurs="0" name="resultMessage" type="xs:string"/>
+                <xs:element minOccurs="0" name="stage" type="xs:string"/>
+                <xs:element name="successful" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+</xs:schema>
